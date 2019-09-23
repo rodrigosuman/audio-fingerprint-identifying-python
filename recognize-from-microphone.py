@@ -159,42 +159,6 @@ if __name__ == '__main__':
 
         return songs
 
-        # diff_counter = {}
-        # largest = 0
-        # largest_count = 0
-        # song_id = -1
-
-        # for tup in matches:
-        #     sid, diff = tup
-
-        #     if diff not in diff_counter:
-        #         diff_counter[diff] = {}
-
-        #     if sid not in diff_counter[diff]:
-        #         diff_counter[diff][sid] = 0
-
-        #     diff_counter[diff][sid] += 1
-
-        #     if diff_counter[diff][sid] > largest_count:
-        #         largest = diff
-        #         largest_count = diff_counter[diff][sid]
-        #         song_id = sid
-
-        # songM = db.get_song_by_id(song_id)
-
-        # nseconds = round(
-        #     float(largest) / fingerprint.DEFAULT_FS *
-        #     fingerprint.DEFAULT_WINDOW_SIZE *
-        #     fingerprint.DEFAULT_OVERLAP_RATIO, 5)
-
-        # return {
-        #     "SONG_ID": song_id,
-        #     "SONG_NAME": songM[1],
-        #     "CONFIDENCE": largest_count,
-        #     "OFFSET": int(largest),
-        #     "OFFSET_SECS": nseconds
-        # }
-
     total_matches_found = len(matches)
 
     print ''
